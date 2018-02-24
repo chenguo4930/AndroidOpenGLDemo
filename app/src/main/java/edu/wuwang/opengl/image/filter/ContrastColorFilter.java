@@ -18,16 +18,22 @@ public class ContrastColorFilter extends AFilter {
         this.filter = filter;
     }
 
-    @Override
-    public void onDrawSet() {
-        GLES20.glUniform1i(hChangeType, filter.getType());
-        GLES20.glUniform3fv(hChangeColor, 1, filter.data(), 0);
-    }
-
+    /**
+     * 获取将图片处理的类型变量
+     * @param mProgram
+     */
     @Override
     public void onDrawCreatedSet(int mProgram) {
         hChangeType = GLES20.glGetUniformLocation(mProgram, "vChangeType");
         hChangeColor = GLES20.glGetUniformLocation(mProgram, "vChangeColor");
     }
 
+    /**
+     * 对底层变量进行赋值
+     */
+    @Override
+    public void onDrawSet() {
+        GLES20.glUniform1i(hChangeType, filter.getType());
+        GLES20.glUniform3fv(hChangeColor, 1, filter.data(), 0);
+    }
 }

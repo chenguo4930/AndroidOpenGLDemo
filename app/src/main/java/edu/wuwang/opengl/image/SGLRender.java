@@ -10,7 +10,6 @@ import android.graphics.Bitmap;
 import android.opengl.GLSurfaceView;
 import android.view.View;
 
-
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 

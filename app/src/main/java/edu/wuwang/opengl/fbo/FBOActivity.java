@@ -121,7 +121,6 @@ public class FBOActivity extends BaseActivity implements FBORender.Callback {
             bos.flush();
             bos.close();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         runOnUiThread(new Runnable() {

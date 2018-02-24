@@ -21,7 +21,7 @@ public class NoFilter extends AFilter {
     @Override
     protected void onCreate() {
         createProgramByAssetsFile("shader/base_vertex.vert",
-                "shader/base_vertex.vert");
+                "shader/base_fragment.frag");
     }
 
     @Override

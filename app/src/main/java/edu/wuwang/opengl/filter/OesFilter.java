@@ -27,7 +27,7 @@ public class OesFilter extends AFilter {
 
     @Override
     protected void onCreate() {
-        createProgramByAssetsFile("shader/oes_base_vertex.vert", "shader/oes_base_vertex.vert");
+        createProgramByAssetsFile("shader/oes_base_vertex.vert", "shader/oes_base_fragment.frag");
         mHCoordMatrix = GLES20.glGetUniformLocation(mProgram, "vCoordMatrix");
     }
 
